@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body class="body-page1">
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+  <div class="today-work">
+    <div class="today-content">
+      <h1>
+        <%= dateName%>
+      </h1>
+      <ul>
+        <% todoList.forEach(element=>{ %>
+          <li><span><input type="checkbox" class="checkbox-today" name="todoTask" value="todoId">
+            </span>
+            <%= element.todoTask %>
+              <form method="POST" action="/delete/<%= element.todoId %>">
+                <button type="submit">Delete</button>
+              </form>
+          </li>
+          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+          <%})%>
+
+      </ul>
+    </div>
+    <div class="add-todo">
+      <form action="/" method="POST">
+        <input type="text" id="todoText" name="todoTask" placeholder="Enter Task" value="">
+        <button type="submit">+</button>
+      </form>
+    </div>
+    </di>
+
+    <%- include('../partials/footer'); %>
+</body>
+
+
+</html>
