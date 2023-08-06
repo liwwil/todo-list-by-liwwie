@@ -9,31 +9,32 @@
   .today-work{
     margin: auto;
     margin-top: 5rem;
-    width: 25%;
+    width: 40%;
     padding: 0.5rem;
     background-color: lightblue;
 
 }
 
 .today-content{
-    text-align: left;
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
+    width: 100%;
 }
 
 ul {
     list-style: none;
+  
   }
 
 
 
-.delete-icon{
-    float: right;
-    color: red;
-    text-decoration: none;
+.delete-btn{
+   margin-left: 1.5rem;
 }
 
 .add-todo{
     width: 100%;
-    margin: auto;
+    margin-left: 50%;
     display: inline;
 }

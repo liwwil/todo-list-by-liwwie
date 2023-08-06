@@ -57,17 +57,32 @@ app.post("/", (req, res) => {
 
   console.log(todo_list);
 
-  res.render("pages/index", {
-    dateName: todayDate + ", " + dayNum,
-    todoList: todo_list
-  });
+  res.redirect("/");
 });
+
+function removeTodoListById(id) {
+  let arraySize = todo_list.length;
+  let indexTmp = 0;
+  for(let i=0; i< arraySize; i++) {
+    if(todo_list[i].todoId == id) {
+        indexTmp = i;
+    }
+  }
+  todo_list.splice(indexTmp, 1);
+  if(todo_list.length < arraySize) return true; 
+  else return false;
+}
 
 app.post('/delete/:id', function (req, res){
   const id = req.params.id
-  console.log(id)
-  
-
+  console.log(id);
+  let removeData = removeTodoListById(id);
+  if(removeData) {
+    console.log(todo_list);
+    res.redirect("/");
+  } else {
+    throw new Error('Failed delete data');
+  }
 });
 
 
