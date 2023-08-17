@@ -16,10 +16,9 @@
     <div class="today-content">
       
       <ul>
-        <% todoList.forEach(element=>{ %>
-          <li><span><input type="checkbox" class="checkbox-today" name="todoTask" value="todoId">
-            </span>
-            <%= element.todoTask %>
+        <% newItem.forEach(element=>{ %>
+          <li><input type="checkbox" class="checkbox-today" name="todoTask" value="todoId">
+            <%= element.name %>
               <form method="POST" action="/delete/<%= element.todoId %>">
                 <button class="delete-btn" type="submit">Delete</button>
               </form>

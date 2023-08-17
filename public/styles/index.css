@@ -1,5 +1,5 @@
 .body-page1 {
-    background-image: url('/images/todo1.jpg');
+    background-image: url('https://sm.ign.com/t/ign_latam/screenshot/default/7-deadly-sins_t5r9.1280.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -9,15 +9,14 @@
   .today-work{
     margin: auto;
     margin-top: 5rem;
-    width: 40%;
+    width: 100%;
     padding: 0.5rem;
     background-color: lightblue;
 
 }
 
 .today-content{
-    display: flex;
-    justify-content: center;
+
     font-size: 1.5rem;
     width: 100%;
 }
